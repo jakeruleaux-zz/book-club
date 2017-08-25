@@ -1,8 +1,10 @@
-<div>
-  <h3>{{(memberToDisplay | async).first}}</h3>
-  <h4>{{(memberToDisplay | async).last}}</h4>
-  <p>{{(memberToDisplay | async).email}}</p>
-  <p>{{(memberToDisplay | async).current}}</p>
-  <p>{{(memberToDisplay | async).past}}</p>
-  <p>{{(memberToDisplay | async).note}}</p>
+<div class="well" id="well">
+  <div>
+    <h3>{{(memberToDisplay | async).first}} {{(memberToDisplay | async).last}}</h3>
+
+    <p>Email: {{(memberToDisplay | async).email}}</p>
+    <p>Currently Reading: {{(memberToDisplay | async).current}}</p>
+    <p>Has read: {{(memberToDisplay | async).past}}</p>
+    <p>{{(memberToDisplay | async).note}}</p>
+  </div>
 </div>
