@@ -10,23 +10,18 @@ export class MemberService {
 
   constructor(private database: AngularFireDatabase) {
     this.members = database.list('members');
-   }
+  }
 
-  getMembers() {
+  getMembers(){
     return this.members;
   }
 
+  getMemberById(memberId: string) {
+    return this.database.object('members/' + memberId);
+  }
+
   addMember(newMember: Member) {
-   this.members.push(newMember);
- }
-
-
-  getMemberById(memberId: number){
-  //  for (var i = 0; i <= MEMBERS.length - 1; i++) {
-  //    if (MEMBERS[i].id === memberId) {
-  //      return MEMBERS[i];
-  //    }
-  //  }
- }
+    this.members.push(newMember);
+  }
 
 }
