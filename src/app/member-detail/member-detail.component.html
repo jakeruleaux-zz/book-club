@@ -1,8 +1,8 @@
 <div>
-  <h3>{{memberToDisplay.first}}</h3>
-  <h4>{{memberToDisplay.last}}</h4>
-  <p>{{memberToDisplay.email}}</p>
-  <p>{{memberToDisplay.current}}</p>
-  <p>{{memberToDisplay.past}}</p>
-  <p>{{memberToDisplay.note}}</p>
+  <h3>{{(memberToDisplay | async).first}}</h3>
+  <h4>{{(memberToDisplay | async).last}}</h4>
+  <p>{{(memberToDisplay | async).email}}</p>
+  <p>{{(memberToDisplay | async).current}}</p>
+  <p>{{(memberToDisplay | async).past}}</p>
+  <p>{{(memberToDisplay | async).note}}</p>
 </div>

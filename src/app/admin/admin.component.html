@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Body to the Group</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>First Name:</label>
+        <br>
+        <input #newFirst>
+      </div>
+
+      <div>
+        <label>Last Name:</label>
+        <br>
+        <input #newLast>
+      </div>
+      <div>
+        <label>Email:</label>
+        <br>
+        <input #newEmail>
+      </div>
+
+      <div>
+        <label>Currently Reading:</label>
+        <br>
+        <input #newCurrent>
+      </div>
+
+      <div>
+        <label>Has Read:</label>
+        <br>
+        <input #newPast>
+      </div>
+
+      <div>
+       <label>Thoughts:</label>
+       <br>
+       <textarea #newNote></textarea>
+     </div>
+
+     <button (click)="submitForm(newFirst.value, newLast.value, newEmail.value, newCurrent.value, newPast.value, newNote.value); newFirst.value=''; newLast.value=''; newEmail.value=''; newCurrent.value=''; newPast.value=''; newNote.value='';">Add</button>
+    </div>
+  </div>
+</div>
