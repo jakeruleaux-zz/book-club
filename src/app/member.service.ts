@@ -24,4 +24,13 @@ export class MemberService {
     this.members.push(newMember);
   }
 
+  updateMember(localUpdatedMember){
+  var memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+  memberEntryInFirebase.update({first:    localUpdatedMember.first,
+                              last: localUpdatedMember.last,
+                              email: localUpdatedMember.email, current: localUpdatedMember.current, past: localUpdatedMember.past,
+                            note: localUpdatedMember.note});
+}
+
+
 }

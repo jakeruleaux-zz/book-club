@@ -1,0 +1,27 @@
+<h3>Edit Member</h3>
+
+<label>New Member First Name:</label>
+<input [(ngModel)]="selectedMember.first">
+<br>
+
+<label>New Member Last Name:</label>
+<input [(ngModel)]="selectedMember.last">
+<br>
+
+<label>New Member Email:</label>
+<input [(ngModel)]="selectedMember.email">
+<br>
+
+<label>New Member Curretly Reading:</label>
+<input [(ngModel)]="selectedMember.current">
+<br>
+
+<label>New Member Has Read:</label>
+<input [(ngModel)]="selectedMember.past">
+<br>
+
+<label>New Member Thoughts:</label>
+<input [(ngModel)]="selectedMember.note">
+<br>
+
+<button (click)="beginUpdatingMember(selectedMember)">Update</button>
