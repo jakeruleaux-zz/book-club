@@ -14,7 +14,7 @@ const appRoutes: Routes = [
       component: ContactComponent
     },
     {
-       path: 'bookclub',
+       path: '',
        component: BookclubComponent
      }
    ];
