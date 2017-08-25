@@ -1,20 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../member.model';
+import { Router } from '@angular/router';
+import { MemberService} from '../member.service';
 
 @Component({
   selector: 'app-bookclub',
   templateUrl: './bookclub.component.html',
-  styleUrls: ['./bookclub.component.css']
+  styleUrls: ['./bookclub.component.css'],
+  providers: [MemberService]
 })
 export class BookclubComponent implements OnInit {
-  members: Member[] = [
-    new Member("Bob", "Ross", "bob@email.com", "Moby Dick", "Her", "Stuff", 1),
-    new Member("Bill", "Bob", "bb@email.com", "Her", "1984", "Stuffs", 2),
-  ];
+  members: Member[];
 
-  constructor() { }
+  constructor(private router: Router, private memberService: MemberService){}
 
   ngOnInit() {
+    this.members = this.memberService.getMembers();
   }
+  
+  goToDetailPage(clickedMember: Member) {
+    this.router.navigate(['members', clickedMember.id]);
+  };
+
+
 
 }
