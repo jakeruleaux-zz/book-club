@@ -1,5 +1,5 @@
 <h2>Members</h2>
 
-<div *ngFor="let member of members" (click)="goToDetailPage(member)">
+<div *ngFor="let member of members | async" (click)="goToDetailPage(member) (click)=">
     <h3>{{member.first}}{{member.last}}</h3>
 </div>

@@ -1,0 +1,26 @@
+{ "members": [{
+  "first": "Bob",
+  "last": "Ross",
+  "email": "bob@email.com",
+  "current": "MoBY Dick",
+  "past": "Her",
+  "note": "stuff",
+  "id": "1"
+  }, {
+  "first": "Bill",
+  "last": "Tom",
+  "email": "bill@email.com",
+  "current": "Her",
+  "past": "1984",
+  "note": "stuff and stuff",
+  "id": "2"
+  }, {
+  "first": "Sue",
+  "last": "Bob",
+  "email": "sue@email.com",
+  "current": "War and Peace",
+  "past": "Nord",
+  "note": "stuffs and more stuffs",
+  "id": "3"
+  }]
+}
