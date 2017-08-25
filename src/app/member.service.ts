@@ -30,7 +30,12 @@ export class MemberService {
                               last: localUpdatedMember.last,
                               email: localUpdatedMember.email, current: localUpdatedMember.current, past: localUpdatedMember.past,
                             note: localUpdatedMember.note});
-}
+  }
+
+  deleteMember(localMemberToDelete){
+    var memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+    memberEntryInFirebase.remove();
+  }
 
 
 }
